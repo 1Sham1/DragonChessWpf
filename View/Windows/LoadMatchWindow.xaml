@@ -1,0 +1,21 @@
+﻿<Window x:Class="DragonChessKurs.View.Windows.LoadMatchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DragonChessKurs.View.Windows"
+        mc:Ignorable="d"
+        Title="Загрузка игры" Height="300" Width="220"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <ScrollViewer Margin="0,30,0,0" VerticalAlignment="Top"  HorizontalAlignment="Center" Height = "200" Width = "180" Grid.Column = "1" CanContentScroll="True" VerticalScrollBarVisibility="Visible">
+            <ListBox Name="SaveList">
+            </ListBox>
+        </ScrollViewer >
+        <Button x:Name="Load" Height="20" Width="80" Content="Подтвердить" HorizontalAlignment="Center" Click="Load_Click"  VerticalAlignment="Bottom" Margin="0,0,100,10"/>
+        <Button x:Name="Cancel" Height="20" Width="80" Content="Отмена" HorizontalAlignment="Center" Click="Cancel_Click"  VerticalAlignment="Bottom" Margin="100,0,0,10"/>
+        <Label x:Name="label" Content="Выберите сохранение" HorizontalAlignment="Left" Margin="15,0,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

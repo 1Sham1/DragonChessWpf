@@ -43,8 +43,9 @@ namespace DragonChessKurs.ViewModel
         {
             GameWindow gameWindow = new GameWindow();
             var window = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.IsActive);
-            window.Close();
             gameWindow.Show();
+            window.Close();
+            
         }
         #endregion
 

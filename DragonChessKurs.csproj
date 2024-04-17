@@ -71,15 +71,21 @@
     <Compile Include="Infrastructure\Commands\CommandBase.cs" />
     <Compile Include="Infrastructure\Commands\LambdaCommand.cs" />
     <Compile Include="Models\Cell.cs" />
-    <Compile Include="Models\ChessModel.cs" />
+    <Compile Include="Models\ChessManager.cs" />
     <Compile Include="ViewModel\GameViewModel.cs" />
     <Compile Include="ViewModel\MainMenuViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\Windows\GameWindow.xaml.cs">
       <DependentUpon>GameWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Windows\LoadMatchWindow.xaml.cs">
+      <DependentUpon>LoadMatchWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Windows\MainMenuWindow.xaml.cs">
       <DependentUpon>MainMenuWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\SaveWindow.xaml.cs">
+      <DependentUpon>SaveWindow.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -114,13 +120,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Windows\LoadMatchWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Windows\MainMenuWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\SaveWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Date\Images\Icons\Resources\" />
+    <Folder Include="Saves\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Date\Images\Icons\Figures\Black\w.png" />
@@ -217,6 +232,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Date\Images\Icons\Figures\White\E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Date\Sounds\FigureMove.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
